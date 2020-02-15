@@ -2,6 +2,12 @@
 
 echo "..............................Welcome to Sorting Arithmetic Computation Problem.............................."
 
+#DECLARE A DICTIONARY
+declare -A resultStore
+
+#VARIABLE
+index=0
+
 #TAKING INPUT FROM USER
 read -p "Enter first input :" firstInput
 read -p "Enter second input:" secondInput
@@ -22,3 +28,9 @@ echo "Third result:" $thirdResult
 #COMPUTE ARITHMETIC FOURTH COMPUTATION
 fourthResult=`echo "scale=2; $firstInput % $secondInput + $thirdInput" | bc`
 echo "Fourth result:" $fourthResult
+
+#STORE EACH COMPUTATION RESULT INTO DICTIONARY
+resultStore[result $((++index))]=$firstResult
+resultStore[result $((++index))]=$secondResult
+resultStore[result $((++index))]=$thirdResult
+resultStore[result $((++index))]=$fourthResult
