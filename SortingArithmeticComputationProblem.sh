@@ -8,5 +8,9 @@ read -p "Enter second input:" secondInput
 read -p "Enter third input :" thirdInput
 
 #COMPUTE ARITHMETIC FIRST COMPUTATION
-result=`echo "$firstInput + $secondInput * $thirdInput" | bc`
-echo "Result:" $result
+firstResult=`echo "$firstInput + $secondInput * $thirdInput" | bc`
+echo "First result:" $firstResult
+
+#COMPUTE ARITHMETIC SECOND COMPUTATION
+secondResult=`echo "$firstInput * $secondInput + $thirdInput" | bc`
+echo "Second result:" $secondResult
