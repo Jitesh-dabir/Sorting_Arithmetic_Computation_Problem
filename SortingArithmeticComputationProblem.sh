@@ -7,6 +7,8 @@ declare -A resultStore
 
 #VARIABLE
 index=0
+index1=0
+length=0
 
 #TAKING INPUT FROM USER
 read -p "Enter first input :" firstInput
@@ -34,3 +36,10 @@ resultStore[result $((++index))]=$firstResult
 resultStore[result $((++index))]=$secondResult
 resultStore[result $((++index))]=$thirdResult
 resultStore[result $((++index))]=$fourthResult
+
+#FIND LENGTH OF DICTIONARY AND STORE VALUES INTO ARRAY
+length="${#resultStore[@]}"
+for ((index1=0; $index1<$length; index1++))
+do
+array[index1]=${resultStore[result $((index1+1))]}
+done
