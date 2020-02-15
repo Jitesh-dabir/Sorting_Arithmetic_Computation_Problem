@@ -18,3 +18,7 @@ echo "Second result:" $secondResult
 #COMPUTE ARITHMETIC THIRD COMPUTATION
 thirdResult=`echo "scale=2; $thirdInput + $firstInput / $secondInput" | bc`
 echo "Third result:" $thirdResult
+
+#COMPUTE ARITHMETIC FOURTH COMPUTATION
+fourthResult=`echo "scale=2; $firstInput % $secondInput + $thirdInput" | bc`
+echo "Fourth result:" $fourthResult
