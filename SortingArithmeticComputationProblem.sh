@@ -42,7 +42,7 @@ resultStore[result $((++index))]=$fourthResult
 length="${#resultStore[@]}"
 for ((index1=0; $index1<$length; index1++))
 do
-array[index1]=${resultStore[result $((index1+1))]}
+	array[index1]=${resultStore[result $((index1+1))]}
 done
 
 #FUNCTION TO SORT ARRAY IN DESCENDING ORDER
