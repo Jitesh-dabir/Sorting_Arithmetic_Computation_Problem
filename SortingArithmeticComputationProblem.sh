@@ -5,5 +5,5 @@ echo "..............................Welcome to Sorting Arithmetic Computation Pr
 #TAKING INPUT FROM USER
 read -p "Enter first input :" firstInput
 read -p "Enter second input:" secondInput
-read -p "Enter third input :" thirdInputo
+read -p "Enter third input :" thirdInput
 
